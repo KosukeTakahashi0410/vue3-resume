@@ -28,3 +28,7 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 ## TODO
 
 - chakra ui の導入
+- 多言語化
+- vercel deploy
+- docs 作成
+- src ディレクトリの変更
