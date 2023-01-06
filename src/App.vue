@@ -12,7 +12,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <q-btn color="white" text-color="black" label="Standard"></q-btn>
+  <p class="text">テスト</p>
 </template>
 
 <style scoped>
@@ -26,5 +26,9 @@ import HelloWorld from "@/components/HelloWorld.vue";
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.text {
+  color: red;
 }
 </style>
