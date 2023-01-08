@@ -1,0 +1,3 @@
+- **Resume**
+- [はじめに](/)
+- [環境構築](/getting-start/index)
