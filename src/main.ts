@@ -4,6 +4,7 @@
 import { createApp } from "vue";
 import { Quasar } from "quasar";
 import quasarLang from "quasar/lang/ja";
+import './style.css';
 
 // Import icon libraries
 import "@quasar/extras/material-icons/material-icons.css";
