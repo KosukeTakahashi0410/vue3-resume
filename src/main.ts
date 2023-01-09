@@ -4,7 +4,8 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "@/App.vue";
+import i18n from "@/languages/index";
 
 const myApp = createApp(App);
-
+myApp.use(i18n);
 myApp.mount("#app");
