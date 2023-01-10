@@ -17,21 +17,3 @@ const { t } = useI18n();
   <HelloWorld msg="Vite + Vue" />
   <p>{{ t("test.hello") }}</p>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-
-.text {
-  color: red;
-}
-</style>

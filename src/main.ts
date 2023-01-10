@@ -2,7 +2,8 @@
 // FILE: main.js
 
 import { createApp } from "vue";
-import "./style.css";
+// import "./style.css";
+import "./index.css"; //追記
 import App from "@/App.vue";
 import i18n from "@/languages/index";
 import router from "@/router";
