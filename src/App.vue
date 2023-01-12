@@ -17,14 +17,14 @@ const { t } = useI18n();
               <router-link
                 to="/"
                 class="p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                >HOME</router-link
+                >{{ t("sideBar.home") }}</router-link
               >
             </li>
             <li>
               <router-link
                 to="/works"
                 class="p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                >WORKS</router-link
+                >{{ t("sideBar.work") }}</router-link
               >
             </li>
           </ul>
