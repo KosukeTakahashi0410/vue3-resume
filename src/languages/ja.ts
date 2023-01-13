@@ -1,4 +1,7 @@
 export default {
+  title: {
+    header: "Resume",
+  },
   test: {
     hello: "こんにちは",
   },

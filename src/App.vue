@@ -7,7 +7,7 @@ const { t } = useI18n();
 <template>
   <div class="h-full bg-gray-50 dark:bg-gray-800">
     <header>
-      <p>resume</p>
+      <p>{{ t("title.header") }}</p>
     </header>
     <div class="flex">
       <aside class="w-64" aria-label="Sidebar">
@@ -17,7 +17,7 @@ const { t } = useI18n();
               <router-link
                 to="/"
                 class="p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                >{{ t("sideBar.home") }}</router-link
+                >{{ t("sideBar.top") }}</router-link
               >
             </li>
             <li>
