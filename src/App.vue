@@ -5,7 +5,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <div class="h-full bg-gray-50 dark:bg-gray-800">
+  <div class="h-screen bg-gray-50 dark:bg-gray-800">
     <header>
       <p>{{ t("title.header") }}</p>
     </header>
