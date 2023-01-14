@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+import { routes } from "@/router";
 
 const { t } = useI18n();
 </script>
@@ -7,7 +8,16 @@ const { t } = useI18n();
 <template>
   <div class="h-screen bg-gray-50 dark:bg-gray-800">
     <header>
-      <p>{{ t("title.header") }}</p>
+      <!-- TODO ここを画像なりアイコンにしたい -->
+      <p>{{ t("header.title") }}</p>
+      <p>{{ headerLinks }}</p>
+      <div>
+        <ul v-for="(route, index) in routes" :key="index">
+          <li>
+            <a :href="route.path">{{ t(`header.link.${route.name}`) }}</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <div class="flex">
       <aside class="w-64" aria-label="Sidebar">
