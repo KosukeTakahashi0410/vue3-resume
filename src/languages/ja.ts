@@ -6,15 +6,7 @@ export default {
       works: "WORKS",
     },
   },
-  // FIXME: delete unnecessary keys
-  title: {
-    header: "Resume",
-  },
   test: {
     hello: "こんにちは",
-  },
-  sideBar: {
-    top: "HOME",
-    work: "WORK",
   },
 };
