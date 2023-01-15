@@ -9,10 +9,14 @@ const { t } = useI18n();
   <div class="h-screen bg-gray-50 dark:bg-gray-800">
     <header>
       <!-- TODO ここを画像なりアイコンにしたい -->
-      <p>{{ t("header.title") }}</p>
+      <p class="dark:text-white">{{ t("header.title") }}</p>
       <p>{{ headerLinks }}</p>
       <div>
-        <ul v-for="(route, index) in routes" :key="index">
+        <ul
+          v-for="(route, index) in routes"
+          :key="index"
+          class="md:flex hidden dark:text-white"
+        >
           <li>
             <a :href="route.path">{{ t(`header.link.${route.name}`) }}</a>
           </li>
@@ -20,6 +24,7 @@ const { t } = useI18n();
       </div>
     </header>
     <div class="flex">
+      <!-- FIXME: サイドバーは各セクションにしたい -->
       <aside class="w-64" aria-label="Sidebar">
         <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
           <ul class="space-y-2">
