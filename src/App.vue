@@ -16,21 +16,19 @@ const changeLanguage = () => {
 </script>
 
 <template>
-  <div class="h-screen bg-gray-50 dark:bg-gray-800">
+  <div class="h-screen bg-gray-50 dark:bg-gray-800 dark:text-white font-normal">
     <header class="flex justify-between items-center p-5 sticky top-0 z-50">
       <div class="flex justify-between items-center">
         <!-- TODO アイコンに -->
-        <p class="dark:text-white pr-1">{{ t("header.title") }}</p>
+        <p class="pr-1">{{ t("header.title") }}</p>
         <!-- TODO アイコンに -->
-        <button type="button" @click="changeLanguage" class="dark:text-white">
-          言語変更
-        </button>
+        <button type="button" @click="changeLanguage">言語変更</button>
       </div>
       <ul class="md:flex hidden gap-x-2">
         <li
           v-for="(route, index) in routes"
           :key="index"
-          class="dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 rounded-lg"
+          class="hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 rounded-lg"
         >
           <router-link :to="route.path">
             {{ t(`header.link.${route.name}`) }}
@@ -46,14 +44,14 @@ const changeLanguage = () => {
             <li>
               <router-link
                 to="/"
-                class="p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >{{ "わろた" }}</router-link
               >
             </li>
             <li>
               <router-link
                 to="/works"
-                class="p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >{{ "わろた" }}</router-link
               >
             </li>
