@@ -7,20 +7,18 @@ const { t } = useI18n();
 
 <template>
   <div class="h-screen bg-gray-50 dark:bg-gray-800">
-    <header>
+    <header class="flex justify-between p-5">
       <!-- TODO ここを画像なりアイコンにしたい -->
       <p class="dark:text-white">{{ t("header.title") }}</p>
-      <div>
-        <ul
+      <ul class="md:flex hidden gap-x-2">
+        <li
           v-for="(route, index) in routes"
           :key="index"
-          class="md:flex hidden dark:text-white"
+          class="dark:text-white"
         >
-          <li>
-            <a :href="route.path">{{ t(`header.link.${route.name}`) }}</a>
-          </li>
-        </ul>
-      </div>
+          <a :href="route.path">{{ t(`header.link.${route.name}`) }}</a>
+        </li>
+      </ul>
     </header>
     <div class="flex">
       <!-- FIXME: サイドバーは各セクションにしたい -->
