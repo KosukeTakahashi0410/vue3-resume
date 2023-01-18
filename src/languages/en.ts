@@ -6,8 +6,7 @@ export default {
       works: "WORKS",
     },
   },
-  // FIXME: delete unnecessary keys
-  title: {
-    header: "Resume",
+  test: {
+    hello: "Hello",
   },
 };
