@@ -10,7 +10,6 @@ const { t } = useI18n();
     <header>
       <!-- TODO ここを画像なりアイコンにしたい -->
       <p class="dark:text-white">{{ t("header.title") }}</p>
-      <p>{{ headerLinks }}</p>
       <div>
         <ul
           v-for="(route, index) in routes"
