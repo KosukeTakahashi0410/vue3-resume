@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { routes } from "@/router";
+import { computed } from "vue";
 const { t, locale } = useI18n();
 
 /** 言語切り替え */
@@ -13,28 +14,44 @@ const changeLanguage = () => {
       locale.value = "ja";
   }
 };
+
+const isJaLang = computed(() => locale.value === "ja");
 </script>
 
 <template>
   <div class="h-screen bg-gray-50 dark:bg-gray-800 dark:text-white font-normal">
     <header class="flex justify-between items-center p-5 sticky top-0 z-50">
+      <RouterLink to="/">
+        <img src="@/assets/octopus.svg" alt="logo" class="h-[24px] w-[24px]" />
+      </RouterLink>
       <div class="flex justify-between items-center">
-        <!-- TODO アイコンに -->
-        <p class="pr-1">{{ t("header.title") }}</p>
-        <!-- TODO アイコンに -->
-        <button type="button" @click="changeLanguage">言語変更</button>
+        <!-- TODO dark対応 -->
+        <button type="button" @click="changeLanguage" class="md:mr-2 mr-0">
+          <img
+            v-if="isJaLang"
+            src="@/assets/japan.svg"
+            alt="japan"
+            class="h-[24px] w-[24px]"
+          />
+          <img
+            v-else
+            src="@/assets/america.svg"
+            alt="us"
+            class="h-[24px] w-[24px]"
+          />
+        </button>
+        <ul class="md:flex hidden gap-x-2">
+          <li
+            v-for="(route, index) in routes"
+            :key="index"
+            class="hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 rounded-lg"
+          >
+            <router-link :to="route.path">
+              {{ t(`header.link.${route.name}`) }}
+            </router-link>
+          </li>
+        </ul>
       </div>
-      <ul class="md:flex hidden gap-x-2">
-        <li
-          v-for="(route, index) in routes"
-          :key="index"
-          class="hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 rounded-lg"
-        >
-          <router-link :to="route.path">
-            {{ t(`header.link.${route.name}`) }}
-          </router-link>
-        </li>
-      </ul>
     </header>
     <div class="flex">
       <!-- FIXME: サイドバーは各セクションにしたい -->
