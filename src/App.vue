@@ -37,12 +37,19 @@ const getHashedLink = (hash: string): string => `${route.path}#${hash}`;
 <template>
   <div class="h-screen bg-gray-50 dark:bg-gray-800 dark:text-white font-normal">
     <header class="flex justify-between items-center p-5 sticky top-0 z-50">
-      <RouterLink to="/">
+      <RouterLink
+        to="/"
+        class="hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 rounded-lg"
+      >
         <img src="@/assets/octopus.svg" alt="logo" class="h-[24px] w-[24px]" />
       </RouterLink>
       <div class="flex justify-between items-center">
         <!-- TODO dark対応 -->
-        <button type="button" @click="changeLanguage" class="md:mr-2 mr-0">
+        <button
+          type="button"
+          @click="changeLanguage"
+          class="md:mr-2 mr-0 hover:bg-gray-700 p-1.5 rounded-lg"
+        >
           <img
             v-if="isJaLang"
             src="@/assets/japan.svg"
