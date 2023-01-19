@@ -2,10 +2,15 @@
 import { useI18n } from "vue-i18n";
 import { routes } from "@/router";
 import { computed } from "vue";
+import { SECTIONS } from "@/constants/section";
+import { useRoute } from "vue-router";
+
 const { t, locale } = useI18n();
 
+const route = useRoute();
+
 /** 言語切り替え */
-const changeLanguage = () => {
+const changeLanguage = (): void => {
   switch (locale.value) {
     case "ja":
       locale.value = "en";
@@ -15,7 +20,18 @@ const changeLanguage = () => {
   }
 };
 
-const isJaLang = computed(() => locale.value === "ja");
+const isJaLang = computed((): boolean => locale.value === "ja");
+
+const selectedSection = computed((): Array<string> => {
+  switch (route.path) {
+    case "/":
+      return SECTIONS.HOME;
+    default:
+      return SECTIONS.WORK;
+  }
+});
+
+const getHashedLink = (hash: string): string => `${route.path}#${hash}`;
 </script>
 
 <template>
@@ -58,16 +74,9 @@ const isJaLang = computed(() => locale.value === "ja");
       <aside class="w-64" aria-label="Sidebar">
         <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
           <ul class="space-y-2">
-            <li>
+            <li v-for="(section, index) in selectedSection" :key="index">
               <router-link
-                to="/"
-                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
-                >{{ "わろた" }}</router-link
-              >
-            </li>
-            <li>
-              <router-link
-                to="/works"
+                :to="getHashedLink(section)"
                 class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >{{ "わろた" }}</router-link
               >
