@@ -1,8 +1,4 @@
-// refs: https://quasar.dev/start/vite-plugin#using-quasar
-// FILE: main.js
-
 import { createApp } from "vue";
-// import "./style.css";
 import "./index.css"; //追記
 import App from "@/App.vue";
 import i18n from "@/languages/index";
