@@ -4,23 +4,12 @@ import { routes } from "@/router";
 import { computed } from "vue";
 import { SECTIONS } from "@/constants/section";
 import { useRoute } from "vue-router";
-
-const { t, locale } = useI18n();
+import { useLanguage } from "@/composables/useLanguage";
+import { getHashedLink } from "@/utils/url";
 
 const route = useRoute();
-
-/** 言語切り替え */
-const changeLanguage = (): void => {
-  switch (locale.value) {
-    case "ja":
-      locale.value = "en";
-      return;
-    default:
-      locale.value = "ja";
-  }
-};
-
-const isJaLang = computed((): boolean => locale.value === "ja");
+const { t } = useI18n();
+const { changeLanguage, isJa } = useLanguage();
 
 const selectedSection = computed((): Array<string> => {
   switch (route.path) {
@@ -30,8 +19,6 @@ const selectedSection = computed((): Array<string> => {
       return SECTIONS.WORK;
   }
 });
-
-const getHashedLink = (hash: string): string => `${route.path}#${hash}`;
 </script>
 
 <template>
@@ -51,7 +38,7 @@ const getHashedLink = (hash: string): string => `${route.path}#${hash}`;
           class="md:mr-2 mr-0 hover:bg-gray-700 p-1.5 rounded-lg"
         >
           <img
-            v-if="isJaLang"
+            v-if="isJa"
             src="@/assets/japan.svg"
             alt="japan"
             class="h-[24px] w-[24px]"
@@ -83,7 +70,7 @@ const getHashedLink = (hash: string): string => `${route.path}#${hash}`;
           <ul class="space-y-2">
             <li v-for="(section, index) in selectedSection" :key="index">
               <router-link
-                :to="getHashedLink(section)"
+                :to="getHashedLink(route.path, section)"
                 class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >{{ "わろた" }}</router-link
               >
