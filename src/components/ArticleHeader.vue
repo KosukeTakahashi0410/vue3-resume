@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { useI18n } from "vue-i18n";
+type Props = {
+  text: string;
+  variant: "h1" | "h2" | "h3";
+};
 
-const { t } = useI18n();
+const props = defineProps<Props>();
 </script>
 
 <template>
-  <p>{{ t("test.hello") }}</p>
+  <h1 v-if="props.variant === 'h1'">{{ props.text }}</h1>
+  <h2 v-else-if="props.variant === 'h2'">{{ props.text }}</h2>
+  <h3 v-else>{{ props.text }}</h3>
 </template>
