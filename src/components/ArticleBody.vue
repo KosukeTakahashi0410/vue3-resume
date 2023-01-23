@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 
-const { t } = useI18n();
+type Props = {
+  body: string;
+};
+
+const props = defineProps<Props>();
 </script>
 
 <template>
-  <p>{{ t("test.hello") }}</p>
+  <p>{{ props.body }}</p>
 </template>
