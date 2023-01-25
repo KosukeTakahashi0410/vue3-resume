@@ -1,12 +1,17 @@
 <script setup lang="ts">
 type Props = {
-  imagePath: string;
+  imageSrc: string;
 };
 
 const props = defineProps<Props>();
 </script>
 
 <template>
-  <!-- FIXME: VueImageみたいに最適化できないかを検討 -->
-  <img :src="props.imagePath" alt="" />
+  <div>
+    <img
+      :src="props.imageSrc"
+      alt=""
+      class="max-h-[300px] max-w-[300px] md:max-h-[500px] md:max-w-[500px] m-auto"
+    />
+  </div>
 </template>
