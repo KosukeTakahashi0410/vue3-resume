@@ -65,7 +65,7 @@ const selectedSection = computed((): Array<string> => {
     </header>
     <div class="flex">
       <!-- FIXME: サイドバーは各セクションにしたい -->
-      <aside class="w-64" aria-label="Sidebar">
+      <aside class="w-64 hidden md:block" aria-label="Sidebar">
         <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
           <ul class="space-y-2">
             <li v-for="(section, index) in selectedSection" :key="index">
@@ -78,7 +78,7 @@ const selectedSection = computed((): Array<string> => {
           </ul>
         </div>
       </aside>
-      <main class="bg-gray-50 dark:bg-gray-800">
+      <main class="bg-gray-50 dark:bg-gray-800 p-[20px] w-full">
         <RouterView />
       </main>
     </div>
