@@ -9,5 +9,4 @@ const { t } = useI18n();
 <template>
   <p>{{ t("test.hello") }}</p>
   <ArticleImage :imageSrc="Photo2" />
-  <p>a</p>
 </template>
