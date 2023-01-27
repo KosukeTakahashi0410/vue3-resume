@@ -1,14 +1,8 @@
-<script setup lang="ts">
-type Props = {
-  imageSrc: string;
-};
-
-const props = defineProps<Props>();
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <!-- ここをwrapperにする -->
-  <div>
+  <div class="p-[20px]">
     <slot></slot>
   </div>
 </template>
