@@ -78,7 +78,7 @@ const selectedSection = computed((): Array<string> => {
           </ul>
         </div>
       </aside>
-      <main class="bg-gray-50 dark:bg-gray-800 p-[20px] w-full">
+      <main class="w-full">
         <RouterView />
       </main>
     </div>

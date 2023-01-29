@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <!-- ここをwrapperにする -->
-  <p>Wrapper</p>
-  <div class="p-[20px]">
+  <div class="p-[20px] w-full">
     <slot></slot>
   </div>
 </template>
