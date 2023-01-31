@@ -3,6 +3,7 @@ import { useI18n } from "vue-i18n";
 import ArticleImage from "@/components/ArticleImage.vue";
 import ArticleWrapper from "@/components/ArticleWrapper.vue";
 import ArticleHeader from "@/components/ArticleHeader.vue";
+import ArticleBody from "@/components/ArticleBody.vues";
 import Photo2 from "@/assets/images/photo2.png";
 
 const { t } = useI18n();
@@ -10,7 +11,8 @@ const { t } = useI18n();
 
 <template>
   <ArticleWrapper>
-    <ArticleHeader text="aaaa" variant="h1" />
+    <ArticleHeader text="head" variant="h1" />
     <ArticleImage :imageSrc="Photo2" />
+    <ArticleBody body="test" />
   </ArticleWrapper>
 </template>
