@@ -3,7 +3,7 @@ import { useI18n } from "vue-i18n";
 import ArticleImage from "@/components/ArticleImage.vue";
 import ArticleWrapper from "@/components/ArticleWrapper.vue";
 import ArticleHeader from "@/components/ArticleHeader.vue";
-import ArticleBody from "@/components/ArticleBody.vues";
+import ArticleBody from "@/components/ArticleBody.vue";
 import Photo2 from "@/assets/images/photo2.png";
 
 const { t } = useI18n();
