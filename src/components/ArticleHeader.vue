@@ -13,15 +13,24 @@ type Props = {
 const props = defineProps<Props>();
 </script>
 
+<!-- MEMO: h1 18px h2 14px h3  -->
 <template>
   <router-link v-if="hash" :to="getHashedLink(route.path, hash)">
-    <h1 v-if="props.variant === 'h1'">{{ props.text }}</h1>
-    <h2 v-else-if="props.variant === 'h2'">{{ props.text }}</h2>
-    <h3 v-else>{{ props.text }}</h3>
+    <h1 v-if="props.variant === 'h1'" class="text-xl mb-[8px]">
+      {{ props.text }}
+    </h1>
+    <h2 v-else-if="props.variant === 'h2'" class="text-lg mb-[8px]">
+      {{ props.text }}
+    </h2>
+    <h3 v-else class="text-base mb-[8px]">{{ props.text }}</h3>
   </router-link>
   <template v-else>
-    <h1 v-if="props.variant === 'h1'">{{ props.text }}</h1>
-    <h2 v-else-if="props.variant === 'h2'">{{ props.text }}</h2>
-    <h3 v-else>{{ props.text }}</h3>
+    <h1 v-if="props.variant === 'h1'" class="text-xl mb-[8px]">
+      {{ props.text }}
+    </h1>
+    <h2 v-else-if="props.variant === 'h2'" class="text-lg mb-[8px]">
+      {{ props.text }}
+    </h2>
+    <h3 v-else class="text-base mb-[8px]">{{ props.text }}</h3>
   </template>
 </template>
