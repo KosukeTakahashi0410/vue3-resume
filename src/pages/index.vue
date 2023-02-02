@@ -12,7 +12,7 @@ const { t } = useI18n();
 <template>
   <ArticleWrapper>
     <ArticleHeader text="head" variant="h1" />
-    <ArticleImage :imageSrc="Photo2" />
+    <ArticleImage :imageSrc="Photo2" description="これはodamifuuさんの絵です" />
     <ArticleBody body="test" />
   </ArticleWrapper>
 </template>
