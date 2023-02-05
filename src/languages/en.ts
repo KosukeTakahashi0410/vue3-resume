@@ -10,10 +10,35 @@ export default {
     hello: "Hello",
   },
   home: {
-    title: "Profile",
+    title: "Resume",
     photo1: {
       description: "This is odamifuu's art.",
     },
-    content1: "I'm frontend programmer and working at Tokyo, Japan.<br />",
+    profile: {
+      title: "Profile",
+      body: "I'm a web frontend programmer.",
+    },
+    career: {
+      title: "Career",
+      teamLab: {
+        title: "teamLab Inc. - 2021/07 - 現在",
+        body: "I work as frontend programmer.<br />I used Next.js. Next.js mainly.",
+      },
+      teamLabEngineering: {
+        title: "teamLab engineering Inc. - 2020/04 - 2021/06",
+        body: "I worked as web developer.<br />I have deceloped web application used Nuxt.js. ",
+      },
+      jTips: {
+        title: "j-tips（Internship） - 2017/01 - 2020/01",
+        body: "I worked as internship.",
+      },
+      educationalBackground: {
+        title: "Education",
+        university: {
+          title: "Tokyo University of Science - 2016/04 - 2020/03",
+          body: "I searched what elements caused for bed and breakfast service to inbound users.<br />And I also studied entrepreneurship.",
+        },
+      },
+    },
   },
 };
