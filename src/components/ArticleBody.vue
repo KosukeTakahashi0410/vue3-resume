@@ -7,5 +7,5 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <p>{{ props.body }}</p>
+  <p class="test-base whitespace-pre-line">{{ props.body }}</p>
 </template>
