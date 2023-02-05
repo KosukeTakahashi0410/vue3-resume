@@ -11,7 +11,7 @@ export default {
   },
   home: {
     title: "Resume",
-    photo1: {
+    photo: {
       description: "This is odamifuu's art.",
     },
     profile: {

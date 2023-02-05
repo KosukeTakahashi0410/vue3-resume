@@ -11,7 +11,7 @@ export default {
   },
   home: {
     title: "履歴書",
-    photo1: {
+    photo: {
       description: "こちらはodamifuuさんの作品です",
     },
     profile: {
