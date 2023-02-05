@@ -10,9 +10,15 @@ const { t } = useI18n();
 </script>
 
 <template>
+  <!-- fixme: article wrapper にflexとflex gapをつける -->
   <ArticleWrapper>
-    <ArticleHeader text="head" variant="h1" />
-    <ArticleImage :imageSrc="Photo2" description="これはodamifuuさんの絵です" />
-    <ArticleBody body="test" />
+    <ArticleHeader :text="t('home.title')" variant="h1" />
+    <ArticleHeader :text="t('home.profile.title')" variant="h2" />
+    <ArticleImage
+      :imageSrc="Photo2"
+      :description="t('home.photo.description')"
+    />
+    <ArticleBody :body="t('home.profile.body')" />
+    <ArticleHeader :text="t('home.profile.title')" variant="h2" />
   </ArticleWrapper>
 </template>
