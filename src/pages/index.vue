@@ -19,6 +19,21 @@ const { t } = useI18n();
       :description="t('home.photo.description')"
     />
     <ArticleBody :body="t('home.profile.body')" />
-    <ArticleHeader :text="t('home.profile.title')" variant="h2" />
+    <ArticleHeader :text="t('home.career.title')" variant="h2" />
+    <ArticleHeader :text="t('home.career.teamLab.title')" variant="h3" />
+    <ArticleBody :body="t('home.career.teamLab.body')" />
+    <ArticleHeader
+      :text="t('home.career.teamLabEngineering.title')"
+      variant="h3"
+    />
+    <ArticleBody :body="t('home.career.teamLabEngineering.body')" />
+    <ArticleHeader :text="t('home.career.jTips.title')" variant="h3" />
+    <ArticleBody :body="t('home.career.jTips.body')" />
+    <ArticleHeader :text="t('home.educationalBackground.title')" variant="h2" />
+    <ArticleHeader
+      :text="t('home.educationalBackground.university.title')"
+      variant="h3"
+    />
+    <ArticleBody :body="t('home.educationalBackground.university.body')" />
   </ArticleWrapper>
 </template>
