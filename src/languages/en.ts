@@ -22,22 +22,22 @@ export default {
       title: "Career",
       teamLab: {
         title: "teamLab Inc. - 2021/07 - 現在",
-        body: "I work as frontend programmer.<br />I used Next.js. Next.js mainly.",
+        body: "I work as frontend programmer.\nI used Next.js. Next.js mainly.",
       },
       teamLabEngineering: {
         title: "teamLab engineering Inc. - 2020/04 - 2021/06",
-        body: "I worked as web developer.<br />I have deceloped web application used Nuxt.js. ",
+        body: "I worked as web developer.\nI have deceloped web application used Nuxt.js. ",
       },
       jTips: {
         title: "j-tips（Internship） - 2017/01 - 2020/01",
         body: "I worked as internship.",
       },
-      educationalBackground: {
-        title: "Education",
-        university: {
-          title: "Tokyo University of Science - 2016/04 - 2020/03",
-          body: "I searched what elements caused for bed and breakfast service to inbound users.<br />And I also studied entrepreneurship.",
-        },
+    },
+    educationalBackground: {
+      title: "Education",
+      university: {
+        title: "Tokyo University of Science - 2016/04 - 2020/03",
+        body: "I searched what elements caused for bed and breakfast service to inbound users.\nAnd I also studied entrepreneurship.",
       },
     },
   },
