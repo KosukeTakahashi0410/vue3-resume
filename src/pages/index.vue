@@ -12,7 +12,6 @@ const { t } = useI18n();
 
 <template>
   <ArticleWrapper>
-    <!-- fixme: section wrapperを作る childrenを渡すイメージ -->
     <ArticleSection>
       <ArticleHeader :text="t('home.title')" variant="h1" />
       <ArticleHeader :text="t('home.profile.title')" variant="h2" />
