@@ -23,7 +23,9 @@ const selectedSection = computed((): Array<string> => {
 
 <template>
   <div class="h-screen bg-gray-50 dark:bg-gray-800 dark:text-white font-normal">
-    <header class="flex justify-between items-center p-5 sticky top-0 z-50">
+    <header
+      class="flex justify-between items-center p-5 sticky top-0 z-50 bg-gray-50 dark:bg-gray-800"
+    >
       <RouterLink
         to="/"
         class="hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 rounded-lg"
@@ -78,7 +80,7 @@ const selectedSection = computed((): Array<string> => {
           </ul>
         </div>
       </aside>
-      <main class="w-full">
+      <main class="w-full h-full bg-gray-50 dark:bg-gray-800">
         <RouterView />
       </main>
     </div>
