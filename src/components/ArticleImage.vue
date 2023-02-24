@@ -8,11 +8,11 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <div class="m-[8px] flex flex-col items-center">
+  <div class="m-[8px] flex flex-col items-start">
     <img
       :src="props.imageSrc"
       alt=""
-      class="max-h-[300px] max-w-[300px] md:max-h-[500px] md:max-w-[500px] m-auto"
+      class="max-h-[300px] max-w-[300px] md:max-h-[500px] md:max-w-[500px]"
     />
     <p v-if="!!props.description" class="text-sm text-gray-400 w-fit">
       {{ props.description }}
