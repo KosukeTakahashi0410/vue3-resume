@@ -26,7 +26,7 @@ export default {
       },
       teamLabEngineering: {
         title: "teamLab engineering Inc. - 2020/04 - 2021/06",
-        body: "I worked as web developer.\nI have deceloped web application used Nuxt.js. ",
+        body: "I worked as web developer.\nI have developed web application used Nuxt.js and Next.js.",
       },
       jTips: {
         title: "j-tips（Internship） - 2017/01 - 2020/01",
