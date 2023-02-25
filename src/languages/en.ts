@@ -6,9 +6,6 @@ export default {
       works: "WORKS",
     },
   },
-  test: {
-    hello: "Hello",
-  },
   home: {
     title: "Resume",
     photo: {
@@ -39,6 +36,21 @@ export default {
         title: "Tokyo University of Science - 2016/04 - 2020/03",
         body: "I searched what elements caused for bed and breakfast service to inbound users.\nAnd I also studied entrepreneurship.",
       },
+    },
+  },
+  work: {
+    title: "Works",
+    otp: {
+      title: "Web OTP sample",
+      description: "Web OTP sample site.\nI was in charged of frontend.",
+    },
+    gotsugotsu: {
+      title: "Gotsu gotsu no ahan",
+      description: "Useless app.",
+    },
+    tableCreator: {
+      title: "redmine table creator",
+      description: "Chrome extension for creating redmine table.",
     },
   },
 };

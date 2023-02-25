@@ -6,9 +6,6 @@ export default {
       works: "WORKS",
     },
   },
-  test: {
-    hello: "こんにちは",
-  },
   home: {
     title: "履歴書",
     photo: {
@@ -39,6 +36,23 @@ export default {
         title: "東京理科大学 経営学部経営学科 - 2016/04 - 2020/03",
         body: "ゼミでの活動では民泊サービスのユーザーアンケートを定性分析をして、インバウンドのユーザーにとってどのような要因がユーザーの体験をよくするかをするのかを学習しました。\nまた、そのほかにもゼミではアントレプレナーシップについて学習しました。",
       },
+    },
+  },
+  work: {
+    title: "作成物",
+    otp: {
+      title: "Web OTPサンプルサイト",
+      description:
+        "SMS送信のワンタイムパスワードのサンプルサイト。\nFE部分を担当。",
+    },
+    gotsugotsu: {
+      title: "ゴツゴツのアハン",
+      description:
+        "とにかくしょうもないアプリを作りたくて作った画像を出すだけのアプリ。",
+    },
+    tableCreator: {
+      title: "redmine table creator",
+      description: "redmineのテーブルをサクッと作るためのChrome拡張。",
     },
   },
 };
