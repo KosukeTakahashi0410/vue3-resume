@@ -19,6 +19,14 @@ const selectedSection = computed((): Array<string> => {
       return SECTIONS.WORK;
   }
 });
+
+const getSectionLocale = (key: string) => {
+  if (route.path === "/") {
+    return t(`sections.home.${key}`);
+  }
+
+  return t(`sections.work.${key}`);
+};
 </script>
 
 <template>
@@ -74,7 +82,7 @@ const selectedSection = computed((): Array<string> => {
               <router-link
                 :to="getHashedLink(route.path, section)"
                 class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
-                >{{ "わろた" }}</router-link
+                >{{ getSectionLocale(section) }}</router-link
               >
             </li>
           </ul>
