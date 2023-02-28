@@ -6,6 +6,18 @@ export default {
       works: "WORKS",
     },
   },
+  sections: {
+    home: {
+      profile: "自己紹介",
+      career: "職歴",
+      educationalBackground: "学歴",
+    },
+    work: {
+      otp: "OTP",
+      gotsugotsu: "ゴツゴツのアハン",
+      tableCreator: "Table creator",
+    },
+  },
   home: {
     title: "履歴書",
     photo: {
