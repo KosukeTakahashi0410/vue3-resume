@@ -74,7 +74,6 @@ const getSectionLocale = (key: string) => {
       </div>
     </header>
     <div class="flex">
-      <!-- FIXME: サイドバーは各セクションにしたい -->
       <aside class="w-64 hidden md:block" aria-label="Sidebar">
         <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
           <ul class="space-y-2">
