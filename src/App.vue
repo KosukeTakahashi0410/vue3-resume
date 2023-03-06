@@ -34,14 +34,14 @@ const getSectionLocale = (key: string) => {
     <header
       class="flex justify-between items-center p-5 sticky top-0 z-50 bg-gray-50 dark:bg-gray-800"
     >
-      <RouterLink
-        to="/"
+      <a
+        href="https://github.com/KosukeTakahashi0410"
+        target="blank"
         class="hover:bg-gray-100 dark:hover:bg-gray-700 p-1.5 rounded-lg"
       >
         <img src="@/assets/octopus.svg" alt="logo" class="h-[24px] w-[24px]" />
-      </RouterLink>
+      </a>
       <div class="flex justify-between items-center">
-        <!-- TODO dark対応 -->
         <button
           type="button"
           @click="changeLanguage"
