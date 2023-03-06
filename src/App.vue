@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { routes } from "@/router";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { SECTIONS } from "@/constants/section";
 import { useRoute } from "vue-router";
 import { useLanguage } from "@/composables/useLanguage";
@@ -10,6 +10,7 @@ import { getHashedLink } from "@/utils/url";
 const route = useRoute();
 const { t } = useI18n();
 const { changeLanguage, isJa } = useLanguage();
+const isOpenMenu = ref<boolean>(false);
 
 const selectedSection = computed((): Array<string> => {
   switch (route.path) {
@@ -26,6 +27,10 @@ const getSectionLocale = (key: string) => {
   }
 
   return t(`sections.work.${key}`);
+};
+
+const toggleMenu = () => {
+  isOpenMenu.value = !isOpenMenu.value;
 };
 </script>
 
@@ -59,6 +64,9 @@ const getSectionLocale = (key: string) => {
             alt="us"
             class="h-[24px] w-[24px]"
           />
+        </button>
+        <button @click="toggleMenu" class="md:hidden top-0 right-0 ml-[8px]">
+          <img src="@/assets/menu.svg" alt="us" class="h-[24px] w-[24px]" />
         </button>
         <ul class="md:flex hidden gap-x-2">
           <li
