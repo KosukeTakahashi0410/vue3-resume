@@ -79,6 +79,9 @@ const toggleMenu = () => {
             </router-link>
           </li>
         </ul>
+        <div v-if="isOpenMenu" class="md:hidden block">
+          <p>わいやで</p>
+        </div>
       </div>
     </header>
     <div class="flex">
