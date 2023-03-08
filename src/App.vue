@@ -79,11 +79,12 @@ const toggleMenu = () => {
             </router-link>
           </li>
         </ul>
-        <div v-if="isOpenMenu" class="md:hidden block">
-          <p>わいやで</p>
-        </div>
       </div>
     </header>
+    <div
+      v-if="isOpenMenu"
+      class="md:hidden block fixed inset-0 w-screen h-full white bg-white overflow-relative mt-[76px]"
+    ></div>
     <div class="flex">
       <aside class="w-64 hidden md:block" aria-label="Sidebar">
         <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
